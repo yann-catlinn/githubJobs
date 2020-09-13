@@ -36,7 +36,6 @@ function printJob(job) {
     <table class="table table-hover">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col orderData_label">#</th>
                         <th scope="col location_label">Location</th>
                         <th scope="col company_label">Company</th>
                         <th scope="col title_label">Title</th>
@@ -46,7 +45,6 @@ function printJob(job) {
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row" class="orderData">1</th>
                         <td class="location">${job.location}</td>
                         <td class="company">${job.company}</td>
                         <td class="company">${job.title}</td>
