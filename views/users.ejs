@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Formulario en Express</h1>
+    <form action="/users" method="POST">
+        <label for="">Nombre</label>
+        <input name="name" type="text">
+        <label for="">Apellido</label>
+        <input name="lastname" type="text">
+        <label for="">Contraseña</label>
+        <input name="password" type="password">
+        <input type="submit">
+    </form>
+    <h1>Lista de usuarios</h1>
+    <div>
+        <ul>
+            <!--ul>
+                <% result.forEach(function(user){ %>
+                    <li>
+                        <%= user.name %>
+                    </li>
+                    <% }); %>
+            </ul-->
+            <% result.forEach(function(user){ %>
+                <%if (user.lastname.match(/ñ/gi)){
+                let lastname= user.lastname.replace(/ñ/gi,"nn")%>
+                    <li>
+                        <%=user.name %>
+                            <%= lastname %>
+                    </li>
+                    <%} else { %>
+                        <li>
+                            <%= user.name %>
+                                <%= user.lastname %>
+                        </li>
+                        <%}%>
+                            <% }); %>
+        </ul>
+    </div>
+
+</body>
+
+</html>

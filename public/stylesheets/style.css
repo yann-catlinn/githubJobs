@@ -1,0 +1,29 @@
+body {
+    padding: 50px;
+    background: lightgray;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    color: #00B7FF;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 60px;
+}
+
+input {
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+input:nth-last-child(1) {
+    height: 40px;
+    background: lightskyblue;
+}
